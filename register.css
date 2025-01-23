@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    
+}
+body{
+  justify-content: center;
+}
+header{
+    background-color: rgba(0, 0, 0, 0.808);
+}
+.wrapper{
+    background-image: url("pic.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+h3{
+    font-family: "Playwrite IN", serif;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+h3 span{
+    color: orange;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+}
+nav ul li{
+    margin: 20px;
+   
+}
+nav ul li a{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 1 ease-in-out;
+}
+.login{
+    padding: 10px 10px ;
+    background-color: orange;
+}
+.login:hover{
+    color: white;
+    background-color: rgb(238, 156, 4);
+}
+nav ul li a:hover{
+    color: orange;
+}
+.form-container {
+    background: #ffffff9a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    backdrop-filter: blur(5px);
+    max-width: 400px;
+    margin-left: 500px;
+    margin-top: 60px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: orangered;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}

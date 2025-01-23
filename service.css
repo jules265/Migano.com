@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+header{
+    background-color: rgba(0, 0, 0, 0.808);
+}
+.wrapper{
+    background-image: url("pic.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+h3{
+    font-family: "Playwrite IN", serif;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+h3 span{
+    color: orange;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+}
+nav ul li{
+    margin: 20px;
+   
+}
+nav ul li a{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 1 ease-in-out;
+}
+.login{
+    padding: 10px 10px ;
+    background-color: orange;
+}
+.login:hover{
+    color: white;
+    background-color: rgb(238, 156, 4);
+}
+nav ul li a:hover{
+    color: orange;
+}
+
+/* Services section */
+#services {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#services h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.service-item {
+    display: inline-block;
+    width: 30%;
+    margin: 15px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-top: 15px;
+    color: #333;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Contact Us section */
+#contact-us {
+    text-align: center;
+    margin: 40px 0;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-us h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact-us p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+#contact-us button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-us button:hover {
+    background-color: #555;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .service-item {
+        width: 45%; /* Two items per row */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service-item {
+        width: 100%; /* One item per row */
+    }
+
+    header h3 {
+        font-size: 20px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+}

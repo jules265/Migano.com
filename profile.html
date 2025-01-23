@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css>
+    <title>User Profile</title>
+    <link rel="icon" href="codlogo.avif">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+        <header>
+            <h1>Your Profile</h1>
+        </header>
+
+        <!-- Profile Section -->
+        <section class="profile">
+            <div class="profile-header">
+                <div class="profile-picture">
+                    <img id="profilePicture" src="default-profile.png" alt="Profile Picture">
+                    <button id="changePictureButton">Change Picture</button>
+                    <input type="file" id="uploadPicture" accept="image/*" style="display: none;">
+                </div>
+                <div class="profile-info">
+                    <h2 id="profileName">John Doe</h2>
+                    <p id="profileBio">Web Developer | Designer</p>
+                    <button id="editProfile">Edit Profile</button>
+                    <button id="saveProfile" style="display: none;">Save Changes</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
