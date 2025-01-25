@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Migano Restaurant</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #2d3e50;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .navbar {
+            text-align: center;
+            background-color: #ff6f61;
+            padding: 1em 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5em;
+            font-size: 1.2em;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .hero-section {
+            background-image: url('https://example.com/restaurant-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(248, 183, 62);
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .cta-btn {
+            background-color: #ff6f61;
+            color: white;
+            padding: 0.8em 2em;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+        .cta-btn:hover {
+            background-color: #e55d4b;
+        }
+
+        .about-section, .menu-section, .testimonials-section {
+            text-align: center;
+            padding: 3em 0;
+        }
+
+        .about-section h2, .menu-section h2, .testimonials-section h2 {
+            font-size: 2.5em;
+            color: #2d3e50;
+        }
+
+        .section-content {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 1em;
+        }
+
+        footer {
+            background-color: #2d3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        span{
+            color: orange;
+        font-family: "Playwrite IN", serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>Migano Restaurant</span></h1>
+        <p>Delicious Mediterranean Cuisine, Right in the Heart of the City</p>
+    </header>
+
+    <div class="navbar">
+        <a href="#about">About Us</a>
+        <a href="#menu">Menu</a>
+        <a href="#reservations">Make a Reservation</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <section class="hero-section">
+        <div>
+            <h2>Experience the Flavors of the Mediterranean</h2>
+            <a href="#menu" class="cta-btn">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Migano Restaurant</h2>
+        <p class="section-content">
+            At Migano, we blend tradition and modernity to create mouthwatering dishes using only the freshest ingredients. Whether you are craving grilled meats, seafood, or vegetarian options, we have something for everyone.
+        </p>
+        <p class="section-content">
+            Join us for an unforgettable dining experience that combines delicious food, great ambiance, and excellent service.
+        </p>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+        <p class="section-content">
+            From fresh seafood to hearty Mediterranean classics, our menu offers a variety of dishes made from the highest quality ingredients. Explore the full range of options designed to satisfy your taste buds.
+        </p>
+        <a href="menu.html" class="cta-btn">See Full Menu</a>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <h2>What Our Guests Say</h2>
+        <p class="section-content">
+            "The best Mediterranean restaurant in town! The flavors are authentic, and the ambiance is perfect for a family dinner or date night." – Sarah, Loyal Customer
+        </p>
+        <p class="section-content">
+            "A wonderful dining experience. The seafood paella was incredible, and the service was top-notch!" – Mark, Food Critic
+        </p>
+    </section>
+
+    <section id="reservations" class="about-section">
+        <h2>Make a Reservation</h2>
+        <p class="section-content">
+            Ready to enjoy a delicious meal at Migano? We highly recommend making a reservation, especially on weekends.
+        </p>
+        <a href="reservations.html" class="cta-btn">Book Your Table Now</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Migano Restaurant. All Rights Reserved.</p>
+        <p>Address: 123 Flavor Street, Cityville | Phone: (123) 456-7890 | <a href="mailto:info@miganorestaurant.com" style="color: white;">Email Us</a></p>
+    </footer>
+</body>
+</html>

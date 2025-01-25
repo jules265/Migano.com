@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migano Restaurant Menu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #2d3e50;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .navbar {
+            text-align: center;
+            background-color: #ff6f61;
+            padding: 1em 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5em;
+            font-size: 1.2em;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2em;
+            padding: 3em 10%;
+        }
+
+        .menu-item {
+            background-color: white;
+            padding: 2em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item h3 {
+            color: #2d3e50;
+            font-size: 1.8em;
+            margin: 0;
+        }
+
+        .menu-item p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-top: 1em;
+        }
+
+        .menu-item .price {
+            color: #ff6f61;
+            font-size: 1.5em;
+            margin-top: 1em;
+        }
+
+        footer {
+            background-color: #2d3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        h1 span{
+            font-family: "Playwrite IN", serif;
+    color: orange;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>Migano Restaurant</span> Menu</h1>
+        <p>Discover Our Delicious Mediterranean Dishes</p>
+    </header>
+
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="contactt.html">Contact Us</a>
+    </div>
+
+    <section class="menu-section">
+        <div class="menu-item">
+            <h3>Grilled Lamb Chops with Mint Sauce</h3>
+            <p>
+                Tender lamb chops grilled to perfection, served with a refreshing mint sauce and a side of roasted vegetables. A true Mediterranean classic.
+            </p>
+            <p class="price">$22.99</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Seafood Paella</h3>
+            <p>
+                A rich and flavorful seafood paella featuring shrimp, mussels, and clams, cooked with saffron rice and Mediterranean spices.
+            </p>
+            <p class="price">$24.99</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Vegetarian Mezze Platter</h3>
+            <p>
+                A delightful assortment of vegetarian Mediterranean dishes, including hummus, baba ganoush, falafel, stuffed grape leaves, and tabbouleh.
+            </p>
+            <p class="price">$18.50</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Migano Signature Burger</h3>
+            <p>
+                A juicy beef patty served with cheddar cheese, fresh lettuce, tomato, pickles, and our special sauce, all on a toasted brioche bun.
+            </p>
+            <p class="price">$15.99</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Chicken Shawarma Wrap</h3>
+            <p>
+                Marinated chicken, grilled and wrapped in a soft pita with garlic sauce, pickles, and fresh vegetables.
+            </p>
+            <p class="price">$14.99</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Homemade Baklava</h3>
+            <p>
+                A sweet and flaky pastry made with layers of phyllo dough, filled with nuts, and soaked in honey syrup. A perfect dessert to end your meal.
+            </p>
+            <p class="price">$6.99</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Migano Restaurant. All Rights Reserved.</p>
+        <p>Address: 123 Flavor Street, Cityville | Phone: (123) 456-7890 | <a href="mailto:nzizajules202@gmail.com" style="color: white;">Email Us</a></p>
+    </footer>
+</body>
+</html>
