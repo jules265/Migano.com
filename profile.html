@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="profile.css">
-    <title>User Profile</title>
+    <title>Client Profile - Hotel Mirage</title>
     <link rel="icon" href="codlogo.avif">
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <h3>Website <span>Development</span></h3>
+            <h3>Welcome To<span> Migano Restaurant</span></h3>
             <nav>
                 <ul>
                     <li><a href="home.html">Home</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                
+                    <li><a href="reservations.html">Reservations</a></li>
+                    <li><a href="contactt.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
+
         <header>
             <h1>Your Profile</h1>
         </header>
@@ -33,90 +34,133 @@
                 </div>
                 <div class="profile-info">
                     <h2 id="profileName">John Doe</h2>
-                    <p id="profileBio">Web Developer | Designer</p>
+                    <p id="profileEmail">johndoe@email.com</p>
+                    <p id="profilePhone">+1 (123) 456-7890</p>
+                    <p id="profileAddress">123 Sunset Blvd, Cityville</p>
+                    <p id="profileReservation">Reservation ID: #123456</p>
+                    <p id="profileReservationDates">Check-in: Jan 30, 2025 | Check-out: Feb 5, 2025</p>
+                    <p id="profileRoom">Room Type: Deluxe Suite</p>
                     <button id="editProfile">Edit Profile</button>
                     <button id="saveProfile" style="display: none;">Save Changes</button>
                 </div>
             </div>
         </section>
     </div>
+
     <script>
-            // Elements
-    const profileName = document.getElementById("profileName");
-    const profileBio = document.getElementById("profileBio");
-    const profilePicture = document.getElementById("profilePicture");
-    const uploadPicture = document.getElementById("uploadPicture");
-    const changePictureButton = document.getElementById("changePictureButton");
-    const editProfile = document.getElementById("editProfile");
-    const saveProfile = document.getElementById("saveProfile");
+        // Elements
+        const profileName = document.getElementById("profileName");
+        const profileEmail = document.getElementById("profileEmail");
+        const profilePhone = document.getElementById("profilePhone");
+        const profileAddress = document.getElementById("profileAddress");
+        const profileReservation = document.getElementById("profileReservation");
+        const profileReservationDates = document.getElementById("profileReservationDates");
+        const profileRoom = document.getElementById("profileRoom");
+        const profilePicture = document.getElementById("profilePicture");
+        const uploadPicture = document.getElementById("uploadPicture");
+        const changePictureButton = document.getElementById("changePictureButton");
+        const editProfile = document.getElementById("editProfile");
+        const saveProfile = document.getElementById("saveProfile");
 
-    // Editable fields
-    const profileNameInput = document.createElement("input");
-    const profileBioInput = document.createElement("textarea");
+        // Editable fields
+        const profileNameInput = document.createElement("input");
+        const profileEmailInput = document.createElement("input");
+        const profilePhoneInput = document.createElement("input");
+        const profileAddressInput = document.createElement("input");
+        const profileReservationInput = document.createElement("input");
+        const profileRoomInput = document.createElement("input");
 
-    // Load saved data from localStorage
-    const loadProfile = () => {
-        const savedName = localStorage.getItem("profileName");
-        const savedBio = localStorage.getItem("profileBio");
-        const savedPicture = localStorage.getItem("profilePicture");
+        // Load saved data from localStorage
+        const loadProfile = () => {
+            const savedName = localStorage.getItem("profileName");
+            const savedEmail = localStorage.getItem("profileEmail");
+            const savedPhone = localStorage.getItem("profilePhone");
+            const savedAddress = localStorage.getItem("profileAddress");
+            const savedReservation = localStorage.getItem("profileReservation");
+            const savedRoom = localStorage.getItem("profileRoom");
+            const savedPicture = localStorage.getItem("profilePicture");
 
-        if (savedName) profileName.textContent = savedName;
-        if (savedBio) profileBio.textContent = savedBio;
-        if (savedPicture) profilePicture.src = savedPicture;
-    };
+            if (savedName) profileName.textContent = savedName;
+            if (savedEmail) profileEmail.textContent = savedEmail;
+            if (savedPhone) profilePhone.textContent = savedPhone;
+            if (savedAddress) profileAddress.textContent = savedAddress;
+            if (savedReservation) profileReservation.textContent = savedReservation;
+            if (savedRoom) profileRoom.textContent = savedRoom;
+            if (savedPicture) profilePicture.src = savedPicture;
+        };
 
-    // Save data to localStorage
-    const saveToLocalStorage = () => {
-        localStorage.setItem("profileName", profileName.textContent);
-        localStorage.setItem("profileBio", profileBio.textContent);
-        localStorage.setItem("profilePicture", profilePicture.src);
-    };
+        // Save data to localStorage
+        const saveToLocalStorage = () => {
+            localStorage.setItem("profileName", profileName.textContent);
+            localStorage.setItem("profileEmail", profileEmail.textContent);
+            localStorage.setItem("profilePhone", profilePhone.textContent);
+            localStorage.setItem("profileAddress", profileAddress.textContent);
+            localStorage.setItem("profileReservation", profileReservation.textContent);
+            localStorage.setItem("profileRoom", profileRoom.textContent);
+            localStorage.setItem("profilePicture", profilePicture.src);
+        };
 
-    // Change profile picture
-    changePictureButton.addEventListener("click", () => {
-        uploadPicture.click();
-    });
+        // Change profile picture
+        changePictureButton.addEventListener("click", () => {
+            uploadPicture.click();
+        });
 
-    uploadPicture.addEventListener("change", (event) => {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                profilePicture.src = e.target.result;
-                saveToLocalStorage();
-            };
-            reader.readAsDataURL(file);
-        }
-    });
+        uploadPicture.addEventListener("change", (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    profilePicture.src = e.target.result;
+                    saveToLocalStorage();
+                };
+                reader.readAsDataURL(file);
+            }
+        });
 
-    // Edit profile
-    editProfile.addEventListener("click", () => {
-        profileNameInput.value = profileName.textContent;
-        profileBioInput.value = profileBio.textContent;
+        // Edit profile
+        editProfile.addEventListener("click", () => {
+            profileNameInput.value = profileName.textContent;
+            profileEmailInput.value = profileEmail.textContent;
+            profilePhoneInput.value = profilePhone.textContent;
+            profileAddressInput.value = profileAddress.textContent;
+            profileReservationInput.value = profileReservation.textContent;
+            profileRoomInput.value = profileRoom.textContent;
 
-        profileName.replaceWith(profileNameInput);
-        profileBio.replaceWith(profileBioInput);
+            profileName.replaceWith(profileNameInput);
+            profileEmail.replaceWith(profileEmailInput);
+            profilePhone.replaceWith(profilePhoneInput);
+            profileAddress.replaceWith(profileAddressInput);
+            profileReservation.replaceWith(profileReservationInput);
+            profileRoom.replaceWith(profileRoomInput);
 
-        editProfile.style.display = "none";
-        saveProfile.style.display = "inline-block";
-    });
+            editProfile.style.display = "none";
+            saveProfile.style.display = "inline-block";
+        });
 
-    // Save profile changes
-    saveProfile.addEventListener("click", () => {
-        profileName.textContent = profileNameInput.value;
-        profileBio.textContent = profileBioInput.value;
+        // Save profile changes
+        saveProfile.addEventListener("click", () => {
+            profileName.textContent = profileNameInput.value;
+            profileEmail.textContent = profileEmailInput.value;
+            profilePhone.textContent = profilePhoneInput.value;
+            profileAddress.textContent = profileAddressInput.value;
+            profileReservation.textContent = profileReservationInput.value;
+            profileRoom.textContent = profileRoomInput.value;
 
-        profileNameInput.replaceWith(profileName);
-        profileBioInput.replaceWith(profileBio);
+            profileNameInput.replaceWith(profileName);
+            profileEmailInput.replaceWith(profileEmail);
+            profilePhoneInput.replaceWith(profilePhone);
+            profileAddressInput.replaceWith(profileAddress);
+            profileReservationInput.replaceWith(profileReservation);
+            profileRoomInput.replaceWith(profileRoom);
 
-        editProfile.style.display = "inline-block";
-        saveProfile.style.display = "none";
+            editProfile.style.display = "inline-block";
+            saveProfile.style.display = "none";
 
-        saveToLocalStorage();
-    });
+            saveToLocalStorage();
+        });
 
-    // Load profile on page load
-    loadProfile();
+        // Load profile on page load
+        loadProfile();
     </script>
 </body>
 </html>

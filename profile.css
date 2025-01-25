@@ -1,4 +1,4 @@
- /* General Reset */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap'); 
  * {
     margin: 0;
     padding: 0;
@@ -12,12 +12,13 @@ header{
     background-position: center;
 }
 h3{
-    font-family: "Playwrite IN", serif;
+   font-family:'Times New Roman', Times, serif;
     font-size: 30px;
     color: rgb(255, 255, 255);
     text-align: center;
 }
-h3 span{
+span{
+    font-family: "Playwrite IN", serif;
     color: orange;
 }
 nav ul{

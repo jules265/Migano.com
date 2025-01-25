@@ -4,102 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make a Reservation - Migano Restaurant</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-
-        header {
-            background-color: #2d3e50;
-            color: white;
-            text-align: center;
-            padding: 2em 0;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-        }
-
-        .navbar {
-            text-align: center;
-            background-color: #ff6f61;
-            padding: 1em 0;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1.5em;
-            font-size: 1.2em;
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-
-        .reservation-form {
-            background-color: white;
-            margin: 3em auto;
-            padding: 2em;
-            width: 60%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .reservation-form h2 {
-            text-align: center;
-            color: #2d3e50;
-            font-size: 2.5em;
-        }
-
-        .form-group {
-            margin-bottom: 1.5em;
-        }
-
-        label {
-            display: block;
-            font-size: 1.1em;
-            color: #333;
-            margin-bottom: 0.5em;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 0.8em;
-            font-size: 1em;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-top: 0.3em;
-        }
-
-        input[type="submit"] {
-            background-color: #ff6f61;
-            color: white;
-            border: none;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #e55d4b;
-        }
-
-        footer {
-            background-color: #2d3e50;
-            color: white;
-            text-align: center;
-            padding: 1.5em 0;
-        }
-
-        footer p {
-            margin: 0;
-        }
-    </style>
+    <link rel="icon" href="rev.webp">
+    <link rel="stylesheet" href="reserv.css">
 </head>
 <body>
     <header>
@@ -116,7 +22,7 @@
 
     <section class="reservation-form">
         <h2>Reserve Your Table</h2>
-        <form>
+        <form onsubmit="handleReservationForm(event)" class="contact-form">
             <div class="form-group">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -165,18 +71,22 @@
         <p>&copy; 2025 Migano Restaurant. All Rights Reserved.</p>
         <p>Address: 123 Flavor Street, Cityville | Phone: (123) 456-7890 | <a href="mailto:info@miganorestaurant.com" style="color: white;">Email Us</a></p>
     </footer>
+
     <script>
-            async function handleContactForm(event) {
+        async function handleReservationForm(event) {
             event.preventDefault();
             const form = event.target;
 
             // Collect form data
             const name = form.name.value.trim();
             const email = form.email.value.trim();
-            const message = form.message.value.trim();
+            const phone = form.phone.value.trim();
+            const date = form.date.value.trim();
+            const time = form.time.value.trim();
+            const specialRequests = form.special_requests.value.trim();
 
-            if (!name || !email || !message) {
-                alert("All fields are required.");
+            if (!name || !email || !phone || !date || !time) {
+                alert("All required fields must be filled out.");
                 return;
             }
 
@@ -187,21 +97,29 @@
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({ name, email, message }),
+                    body: JSON.stringify({
+                        name, 
+                        email, 
+                        phone, 
+                        date, 
+                        time, 
+                        special_requests: specialRequests
+                    }),
                 });
 
                 if (response.ok) {
-                    alert("Message sent successfully!");
+                    alert("Reservation submitted successfully!");
                     form.reset();
                 } else {
                     const error = await response.text();
-                    alert(`Failed to send message: ${error}`);
+                    alert(`Failed to submit reservation: ${error}`);
                 }
             } catch (error) {
-                console.error("Error sending message:", error);
-                alert("An error occurred while sending the message. Please try again later.");
+                console.error("Error submitting reservation:", error);
+                alert("An error occurred while submitting the reservation. Please try again later.");
             }
         }
     </script>
 </body>
 </html>
+ 
