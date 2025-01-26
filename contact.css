@@ -1,140 +1,120 @@
+/* General Styles */
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
-*{
-    padding: 0;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    box-sizing: border-box;
-    
-}
-header{
-    background-color: rgba(0, 0, 0, 0.808);
-}
-.wrapper{
-    background-image: url("pic.jpg");
-    background-size: cover;
-    height: 110vh;
-    background-position: center;
-}
-h3{
-    font-family: "Playwrite IN", serif;
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-h3 span{
-    color: orange;
-}
-nav ul{
-    list-style: none;
-    display: flex;
     padding: 0;
-    text-align: center;
-    justify-content: center;
+    background-color: #f4f4f4;
 }
-nav ul li{
-    margin: 20px;
-   
-}
-nav ul li a{
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    transition: 1 ease-in-out;
-}
-.login{
-    padding: 10px 10px ;
-    background-color: orange;
-}
-.login:hover{
+
+/* Header Styles */
+header {
+    background-color: #333;
     color: white;
-    background-color: rgb(238, 156, 4);
-}
-nav ul li a:hover{
-    color: orange;
+    padding: 10px 20px;
+    text-align: center;
 }
 
-@media screen and (max-width: 768px){
-    nav ul li{
-        flex-basis: 100%;
-    }
+header h3 {
+    font-family: "Playwrite IN", serif;
+    margin: 0;
+    font-size: 24px;
 }
 
-@media screen and (max-width: 480px){
-    nav ul li{
-        flex-basis: 100%;
-    }
-    h3{
-        font-size: 20px;
-    }
+header h3 span {
+    color: orangered;
 }
 
-@media screen and (max-width: 320px){
-    nav ul li{
-        flex-basis: 100%;
-    }
-    h3{
-        font-size: 15px;
-    }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
 }
 
+nav ul li {
+    margin-right: 20px;
+}
 
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
 
-/* Contact Section */
-main .contact {
-    background: #ffffff;
-    padding: 40px;
-    margin: 20px auto;
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li .login {
+    font-weight: bold;
+}
+
+/* Contact Form Section */
+.contact {
+    width: 100%;
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 20px;
+    background: #ffffff96;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    backdrop-filter: blur(5px);
+}
+
+.contact h2 {
+    color: orangered;
     text-align: center;
-}
-
-main .contact h2 {
-    color: #333;
-    font-size: 32px;
-    font-weight: bold;
     margin-bottom: 20px;
-    border-bottom: 2px solid #e8491d;
-    display: inline-block;
-    padding-bottom: 5px;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+/* Form Labels and Inputs */
+label {
+    display: block;
+    margin: 10px 0 5px;
 }
 
-.contact-form label {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    text-align: left;
-}
-
-.contact-form input, .contact-form textarea {
+input[type="text"],
+input[type="email"],
+textarea {
+    outline: none;
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
+    margin-bottom: 15px;
 }
 
-.contact-form textarea {
+textarea {
     resize: vertical;
 }
 
-.contact-form .btn {
-    background: #e8491d;
+/* Submit Button */
+button {
+    width: 100%;
+    background-color: #007BFF;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-.contact-form .btn:hover {
-    background: #333;
-    color: #e8491d;
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile-Friendly Styling */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }

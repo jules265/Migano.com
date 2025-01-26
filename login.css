@@ -50,7 +50,59 @@ nav ul li a{
 }
 nav ul li a:hover{
     color: orange;
+}/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header h3 span {
+    color: orangered;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li .login {
+    font-weight: bold;
+}
+
+/* Login Form Container */
 .form-container {
     background: #ffffff96;
     padding: 20px;
@@ -59,15 +111,19 @@ nav ul li a:hover{
     width: 100%;
     backdrop-filter: blur(5px);
     max-width: 400px;
-    margin-left: 500px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 60px;
 }
 
+/* Heading */
 h2 {
     margin-bottom: 20px;
     color: orangered;
+    text-align: center;
 }
 
+/* Form Labels and Inputs */
 label {
     display: block;
     margin: 10px 0 5px;
@@ -81,8 +137,10 @@ input[type="password"] {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
+    margin-bottom: 15px;
 }
 
+/* Submit Button */
 button {
     width: 100%;
     background-color: #007BFF;
@@ -92,15 +150,27 @@ button {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 15px;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
+/* Error Message */
 .error {
     color: red;
     font-size: 14px;
     margin-top: 10px;
+    text-align: center;
+}
+
+/* Mobile-Friendly Styling */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }

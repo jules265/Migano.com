@@ -5,73 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="register.css">
-    <style>
-      
-    </style>
 </head>
 <body>
 
     <div class="wrapper">
+        <!-- Header Section -->
         <header>
-            <h3>Website <span>Development</span></h3>
+            <h3>Register <span>Migano  Restaurant</span></h3>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="service.html">Service</a></li>
                     <li><a href="register.html">Register</a></li>
                     <li><a href="login.html" class="login">Login</a></li>
                 </ul>
             </nav>
         </header>
-    <div class="form-container">
-        <h2>Register</h2>
-        <form id="registerForm">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" required>
+        <!-- Register Form Section -->
+        <div class="form-container">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
 
-            <label for="confirmPassword">Confirm Password</label>
-            <input type="password" id="confirmPassword" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
 
-            <button type="submit">Register</button>
-            <p id="errorMessage" class="error" style="display: none;">Passwords do not match!</p>
-        </form>
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" required>
+
+                <button type="submit">Register</button>
+                <p id="errorMessage" class="error" style="display: none;">Passwords do not match!</p>
+            </form>
+        </div>
     </div>
-<script>
-    const registerForm = document.getElementById("registerForm");
-const errorMessage = document.getElementById("errorMessage");
 
-registerForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+    <script>
+        const registerForm = document.getElementById("registerForm");
+        const errorMessage = document.getElementById("errorMessage");
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
+        registerForm.addEventListener("submit", (e) => {
+            e.preventDefault();
 
-    // Validate passwords match
-    if (password !== confirmPassword) {
-        errorMessage.style.display = "block";
-        return;
-    } else {
-        errorMessage.style.display = "none";
-    }
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
 
-    // Save user data to localStorage
-    const userData = { name, email, password };
-    localStorage.setItem("userData", JSON.stringify(userData));
+            // Validate passwords match
+            if (password !== confirmPassword) {
+                errorMessage.style.display = "block";
+                return;
+            } else {
+                errorMessage.style.display = "none";
+            }
 
-    // Redirect to login page
-    window.location.href = "login.html";
-});
-</script>
-    
+            // Save user data to localStorage
+            const userData = { name, email, password };
+            localStorage.setItem("userData", JSON.stringify(userData));
+
+            // Redirect to login page
+            window.location.href = "login.html";
+        });
+    </script>
+
 </body>
 </html>
